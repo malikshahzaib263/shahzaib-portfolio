@@ -428,7 +428,7 @@ const speakAssistant = () => {
 
 </div>
 
-      <footer>© 2026 Shahzaib Arshad — Designed & Built with React</footer>
+      <footer>© 2026 Shahzaib Arshad — </footer>
     </main>
   );
   
