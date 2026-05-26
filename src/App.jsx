@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./index.css";
 
 const skills = [
@@ -92,8 +93,38 @@ const certifications = [
 ];
 
 export default function App() {
+  const [openAssistant, setOpenAssistant] = useState(false);
+
+const speakAssistant = () => {
+  const text =
+    "Hello. I am Shahzaib's AI assistant. Shahzaib is a Software Engineering student focused on AI, Machine Learning, Flutter development, FastAPI, Firebase, and intelligent digital products. His Final Year Project is STTP, an AI-powered speech-to-text predictor for stuttering assistance.";
+
+  const speech = new SpeechSynthesisUtterance(text);
+
+  speech.lang = "en-US";
+  speech.rate = 1;
+
+  window.speechSynthesis.speak(speech);
+};
+    useEffect(() => {
+    const glow = document.querySelector(".cursorGlow");
+
+    const moveGlow = (e) => {
+      if (glow) {
+        glow.style.left = `${e.clientX}px`;
+        glow.style.top = `${e.clientY}px`;
+      }
+    };
+
+    window.addEventListener("mousemove", moveGlow);
+
+    return () => {
+      window.removeEventListener("mousemove", moveGlow);
+    };
+  }, []);
   return (
     <main className="site">
+      <div className="cursorGlow"></div>
       <div className="orb orb1"></div>
       <div className="orb orb2"></div>
       <div className="orb orb3"></div>
@@ -356,6 +387,46 @@ export default function App() {
           </a>
         </div>
       </section>
+      <div className="assistantContainer">
+
+  <button
+    className="assistantBtn"
+    onClick={() => setOpenAssistant(!openAssistant)}
+  >
+    🤖
+  </button>
+
+  {openAssistant && (
+    <div className="assistantBox">
+
+      <div className="assistantTop">
+        <div className="assistantAvatar">
+          AI
+        </div>
+
+        <div>
+          <h4>Shahzaib AI Assistant</h4>
+          <small>Online</small>
+        </div>
+      </div>
+
+      <p>
+        Hi 👋 I’m Shahzaib’s virtual AI assistant.
+        I can introduce his skills, projects,
+        AI expertise, and Final Year Project.
+      </p>
+
+      <button
+        className="speakBtn"
+        onClick={speakAssistant}
+      >
+        🔊 Introduce Shahzaib
+      </button>
+
+    </div>
+  )}
+
+</div>
 
       <footer>© 2026 Shahzaib Arshad — Designed & Built with React</footer>
     </main>
