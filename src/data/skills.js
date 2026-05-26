@@ -1,0 +1,18 @@
+export const skills = [
+  "Python",
+  "JavaScript",
+  "React.js",
+  "Flutter",
+  "Dart",
+  "Firebase",
+  "FastAPI",
+  "Flask",
+  "Django",
+  "Machine Learning",
+  "NLP",
+  "TensorFlow Lite",
+  "MongoDB",
+  "SQL Server",
+  "GitHub",
+  "Android Studio",
+];
