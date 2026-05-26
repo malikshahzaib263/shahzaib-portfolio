@@ -97,7 +97,7 @@ export default function App() {
 
 const speakAssistant = () => {
   const text =
-    "Hello. I am Shahzaib's AI assistant. Shahzaib is a Software Engineering student focused on AI, Machine Learning, Flutter development, FastAPI, Firebase, and intelligent digital products. His Final Year Project is STTP, an AI-powered speech-to-text predictor for stuttering assistance.";
+    "Hello. I am Shahzaib's AI assistant. Shahzaib is a Software Engineering student focused on AI, Machine Learning, Python development, Flutter development, FastAPI, Firebase, and intelligent digital products. His Final Year Project is STTP, an AI-powered speech-to-text predictor for stuttering assistance.";
 
   const speech = new SpeechSynthesisUtterance(text);
 
@@ -156,7 +156,7 @@ const speakAssistant = () => {
 
       <section className="hero">
         <div className="heroText">
-          <p className="eyebrow">AI/ML • Full Stack • Mobile App Developer</p>
+          <p className="eyebrow">AI/ML • Full Stack • Mobile App Developer • Python Developer</p>
 
           <h2>
             Building smart digital products with
@@ -165,7 +165,7 @@ const speakAssistant = () => {
 
           <p className="desc">
             I’m Shahzaib Arshad, a Software Engineering student passionate about
-            AI-powered apps, backend systems, Flutter mobile development, and
+            AI-powered apps, backend systems, Flutter mobile development, Python development, and
             user-friendly digital solutions.
           </p>
 
